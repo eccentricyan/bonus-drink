@@ -25,7 +25,8 @@ class BonusDrink
 
   def self.change
     @drinkable_amount = @bottle_amount / 3
-    @bottle_amount = @bottle_amount - (@bottle_amount / 3) * 3
+    @bottle_amount = @bottle_amount % 3
+    # @bottle_amount = @bottle_amount - (@bottle_amount / 3) * 3
     # puts "drinkable_amount " + @drinkable_amount.to_s
     # puts "bottle_amount " + @bottle_amount.to_s
     # puts "drinked_amount " + @drinked_amount.to_s
